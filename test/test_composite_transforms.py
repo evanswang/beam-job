@@ -11,7 +11,6 @@ def test_sum_composite_transform():
     with TestPipeline() as p:
         # Create an input PCollection.
         input = p | beam.Create(TEST_SAMPLE)
-        input | beam.Map(print)
         # Apply the Count transform under test.
         output = input | SumCompositeTransform()
 

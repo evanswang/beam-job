@@ -25,17 +25,6 @@ def run_pipeline():
         )
 
 
-def print_input_data():
-    with beam.Pipeline(options=OPTIONS) as pipeline:
-        (
-            pipeline
-            | "Read CSV files" >> beam.io.ReadFromText("gs://cloud-samples-data/bigquery/sample-transactions/transactions.csv")
-            | "print"
-            >> beam.Map(print)
-        )
-
-
 def main():
-    print_input_data()
     run_pipeline()
     compress_files(OUTPUT_DIR, OUTPUT_FILE_GZ)
