@@ -19,8 +19,12 @@ DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S UTC"
 LAST_SECOND_2009_STRING = "2009-12-31 23:59:59 UTC"
 LAST_SECOND_2009 = get_utc_datetime(LAST_SECOND_2009_STRING)
 
-# column names
-TRANSACTION_AMOUNT_NAME = "transaction_amount"
-TIMESTAMP_NAME = "timestamp"
+# input column names
+TRANSACTION_AMOUNT_COLUMN = "transaction_amount"
+TIMESTAMP_COLUMN = "timestamp"
+
+# output column names
+DATE_COLUMN = "date"
+TOTAL_AMOUNT_COLUMN = "total_amount"
 
 OPTIONS = PipelineOptions(flags=[], type_check_additional="all")

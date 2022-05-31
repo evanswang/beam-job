@@ -1,10 +1,8 @@
 import apache_beam as beam
 from apache_beam.io.filesystems import FileSystems as beam_fs
-from apache_beam.options.pipeline_options import PipelineOptions
 import codecs
 import csv
 from typing import Dict, Iterable, List
-from datetime import datetime
 
 
 @beam.ptransform_fn
